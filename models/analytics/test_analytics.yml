@@ -2,6 +2,7 @@ version: 2
 
 models: 
   - name: module_durations
+    description: configure tests for module durations.
     columns:
       - name: AVG_DUR_BY_MODULE
         tests:
@@ -19,15 +20,17 @@ models:
                 - "Project Management"
                 - "HR"
   - name: onboarding_duration
+    description: configure tests for duration to onboard.
     columns:
       - name: time_to_completion
-    tests:
+        tests:
           - not_null
   - name: people_onboarded
+    description: configure tests for nr. of people onboarded
     columns:
       - name: VAL
         tests:
-          - unique:
+          - not_null
       - name: TYPE
         tests:
           - not_null

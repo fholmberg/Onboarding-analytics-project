@@ -2,11 +2,14 @@ version: 2
 
 models:
   - name: clean_raw
+    description: clean and transform the raw dataset.
     columns: 
       - name: SCORE
+        description: ensure values in SCORE column are not null
         tests:
           - not_null 
       - name: TOPIC
+        description: ensure values in TOPIC column are not null
         tests:
           - not_null
           - accepted_values:
@@ -14,6 +17,7 @@ models:
                 - "Non-technical"
                 - "Technical"
       - name: MODULE_NAME
+        description: ensure values in MODULE_NAME column are not null
         tests:
           - not_null
 
