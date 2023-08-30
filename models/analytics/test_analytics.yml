@@ -1,0 +1,38 @@
+version: 2
+
+models: 
+  - name: module_durations
+    columns:
+      - name: AVG_DUR_BY_MODULE
+        tests:
+          - not_null
+      - name: MODULE_NAME
+        tests:
+          - accepted_values:
+              values:
+                - "Program Intro"
+                - "Case Study"
+                - "Google Workspace"
+                - "Techstack"
+                - "Quality Assurance"
+                - "Delivery"
+                - "Project Management"
+                - "HR"
+  - name: onboarding_duration
+    columns:
+      - name: time_to_completion
+    tests:
+          - not_null
+  - name: people_onboarded
+    columns:
+      - name: VAL
+        tests:
+          - unique:
+      - name: TYPE
+        tests:
+          - not_null
+        
+
+              
+  
+            
