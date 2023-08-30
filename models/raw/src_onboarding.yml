@@ -1,0 +1,20 @@
+version: 2
+
+sources: 
+  - name: PUBLIC
+    description: a clone of the Snowflake database
+    database: ONBOARDING_DB
+    schema: PUBLIC
+    tables: 
+      - name: ONBOARDING_DWH
+        description: onboarding DWH
+        columns:
+          - name: SCORE
+            description: Onboarders quiz scores
+            tests: 
+              - not_null 
+          - name: MODULE_NAME
+            description: Onboarders quiz scores
+            tests: 
+              - not_null 
+          # PK unique
